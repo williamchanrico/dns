@@ -113,6 +113,10 @@ type Msg struct {
 	Answer   []RR       // Holds the RR(s) of the answer section.
 	Ns       []RR       // Holds the RR(s) of the authority section.
 	Extra    []RR       // Holds the RR(s) of the additional section.
+
+	// williamchanrico/consul@v1.7.2-williamchanrico-fork-custom-dns-behavior
+	// to force recursor on NXDOMAIN regardless of consul domain
+	ForceRecursor bool
 }
 
 // ClassToString is a maps Classes to strings for each CLASS wire type.
